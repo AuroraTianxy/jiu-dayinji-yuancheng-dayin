@@ -1,0 +1,20 @@
+{
+  "name": "jiu-dayinji-yuancheng-dayin",
+  "version": "0.1.0",
+  "description": "旧 Windows 电脑主动领取 PDF 打印任务，让有线打印机支持远程打印",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "AuroraTianxy (https://github.com/AuroraTianxy)",
+  "repository": { "type": "git", "url": "https://github.com/AuroraTianxy/jiu-dayinji-yuancheng-dayin.git" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test",
+    "server": "node --env-file=.env server.mjs",
+    "start": "node agent.mjs",
+    "printers": "node agent.mjs --printers"
+  },
+  "dependencies": {
+    "pdf-to-printer": "5.6.0"
+  }
+}

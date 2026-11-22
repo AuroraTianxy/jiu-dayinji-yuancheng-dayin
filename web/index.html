@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旧打印机远程打印</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/print.css">
+  <script type="module" src="/print.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>旧打印机远程打印</h1>
+      <p>发送 PDF 给另一台 Windows 电脑连接的打印机。</p>
+    </header>
+    <section aria-labelledby="submit-title">
+      <h2 id="submit-title">提交 PDF</h2>
+      <label for="token">提交令牌</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" maxlength="1024">
+      <label for="printer">打印点 ID</label>
+      <input id="printer" type="text" placeholder="例如 office" autocomplete="off" spellcheck="false" maxlength="100">
+      <label for="pdf">PDF 文件，最大 10 MiB</label>
+      <input id="pdf" type="file" accept="application/pdf,.pdf">
+      <div class="actions">
+        <button id="submit" type="button">提交打印任务</button>
+        <button id="new" class="secondary" type="button" disabled>新建任务</button>
+      </div>
+      <p id="submit-status" class="status" role="status"></p>
+    </section>
+    <section aria-labelledby="query-title">
+      <h2 id="query-title">查询状态</h2>
+      <label for="job">任务 ID</label>
+      <input id="job" type="text" autocomplete="off" spellcheck="false" maxlength="100">
+      <button id="query" type="button" class="secondary">查询</button>
+      <p id="job-status" class="status" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>
